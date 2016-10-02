@@ -48,7 +48,6 @@
             }
         };
         menu.removeItem = function(itemIndex) {
-            console.log("'this' is: ", itemIndex);
             menu.foundItems.splice(itemIndex, 1);
         };
     }
