@@ -37,6 +37,7 @@
             if (menu.searchTerm) {
                 var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm.toLowerCase());
                 promise.then(function(foundItems) {
+                  console.log("Searching",foundItems);
                     if (foundItems.length == 0) {
                         menu.nothingFound = "Nothing found";
                     }
