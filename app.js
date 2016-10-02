@@ -34,10 +34,9 @@
         menu.foundItems = "";
         menu.search = function() {
             menu.nothingFound = "";
-            if (menu.searchTerm) {
+            if (menu.searchTerm) { // check if empty
                 var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm.toLowerCase());
                 promise.then(function(foundItems) {
-                  console.log("Searching",foundItems);
                     if (foundItems.length == 0) {
                         menu.nothingFound = "Nothing found";
                     }
@@ -45,7 +44,6 @@
                 })
 
             } else {
-                console.log("it's empty");
                 menu.nothingFound = "Nothing found";
             }
         };
