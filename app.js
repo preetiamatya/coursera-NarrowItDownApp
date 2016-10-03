@@ -45,6 +45,7 @@
 
             } else {
                 menu.nothingFound = "Nothing found";
+                menu.foundItems = "";
             }
         };
         menu.removeItem = function(itemIndex) {
